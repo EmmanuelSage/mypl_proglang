@@ -1,0 +1,15 @@
+{
+  "name": "mypl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gen-parser": "nearleyc mypl.grammar -o mypl.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nearley": "^2.19.5"
+  }
+}
