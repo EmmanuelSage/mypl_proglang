@@ -30,7 +30,7 @@ var grammar = {
         data => {
           return {
             type: "print_statement",
-            expression: data[2]
+            expression: data[2].join("")
           }
         }
           },
@@ -42,9 +42,9 @@ var grammar = {
         data => {
           return {
             type: "binary_expression",
-            left: data[0],
+            left: Array.isArray(data[0]) ? data[0].join('') : data[0],
             operator: data[2],
-            right: data[4]
+            right: Array.isArray(data[4]) ? data[4].join('') : data[4]
           }
         }
           },
@@ -68,7 +68,7 @@ var grammar = {
           return {
             type: "var_assignment",
             varname: data[0].join(""),
-            value: data[4]
+            value: Array.isArray(data[4]) ? data[4].join('') : data[4]
           }
         }
           },
